@@ -53,7 +53,7 @@ end
 
 
 # maximum number of seconds in each benchmark
-max_seconds = 20
+max_seconds = 1200
 bootstrap_n = 1000
 
 Random.seed!(4)
