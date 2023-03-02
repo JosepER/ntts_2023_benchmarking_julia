@@ -234,6 +234,8 @@ transform!(df, [:hhtype,:nhhmem17] => ByRow((A, B) -> recode_hhtype(A, B)) => :h
 # end
 
 benchmark_bootstrap_grouped_mld = @benchmark compute_groupby_estimate_with_boot(df, "htype", mld, "hwgt", 1000) samples=100 seconds=60
+push!(benchmarks, preprocess_trial(benchmark_bootstrap_grouped_mld, "benchmark_bootstrap_grouped_mld"))
+
 
 # Output benchmarks -------------------------------------------------------
 
